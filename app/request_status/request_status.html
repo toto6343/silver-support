@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>서비스 요청 현황</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Noto Sans KR", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col overflow-x-hidden bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+<div class="flex items-center p-4 pb-2">
+<button class="flex size-12 shrink-0 items-center justify-center text-slate-800 dark:text-slate-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-xl font-bold leading-tight tracking-[-0.015em] text-slate-900 dark:text-slate-100">서비스 요청 현황</h1>
+<div class="size-12"></div> 
+</div>
+<div class="p-4 pt-2">
+<div class="flex items-center justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:bg-slate-800">
+<div class="flex flex-col gap-1">
+<p class="text-lg font-bold leading-tight text-slate-900 dark:text-slate-100">병원 이동 지원</p>
+<p class="text-sm font-normal leading-normal text-slate-500 dark:text-slate-400">요청 시간: 10월 26일, 오전 10:30</p>
+</div>
+</div>
+</div>
+<div class="px-4">
+<div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-lg border border-primary/30 bg-primary/10 p-5 dark:border-primary/50 dark:bg-primary/20">
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold leading-tight text-primary-800 dark:text-primary-200">평균 응답 시간: 15분</p>
+<p class="text-base font-normal leading-normal text-slate-600 dark:text-slate-300">도우미가 빠르게 배정됩니다!</p>
+</div>
+</div>
+</div>
+<h2 class="px-4 pb-2 pt-6 text-lg font-bold leading-tight tracking-[-0.015em] text-slate-900 dark:text-slate-100">실시간 진행상황</h2>
+<div class="grid grid-cols-[40px_1fr] gap-x-4 px-4">
+<div class="flex flex-col items-center gap-1 pt-3">
+<div class="flex size-8 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined !text-xl">check</span>
+</div>
+<div class="h-full w-[2px] bg-primary"></div>
+</div>
+<div class="flex flex-1 flex-col pb-6 pt-3">
+<p class="text-base font-medium leading-normal text-slate-900 dark:text-slate-100">요청 접수</p>
+<p class="text-sm font-normal leading-normal text-slate-500 dark:text-slate-400">오전 10:30</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="h-full w-[2px] bg-primary"></div>
+<div class="flex size-8 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined !text-xl">check</span>
+</div>
+<div class="h-full w-[2px] bg-primary"></div>
+</div>
+<div class="flex flex-1 flex-col pb-6">
+<p class="text-base font-medium leading-normal text-slate-900 dark:text-slate-100">처리 중</p>
+<p class="text-sm font-normal leading-normal text-slate-500 dark:text-slate-400">오전 10:32 - 요청이 접수되었습니다.</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="h-full w-[2px] bg-primary"></div>
+<div class="flex size-8 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined !text-xl">check</span>
+</div>
+<div class="h-full w-[2px] bg-primary"></div>
+</div>
+<div class="flex flex-1 flex-col pb-6">
+<p class="text-base font-medium leading-normal text-slate-900 dark:text-slate-100">도우미 배정</p>
+<p class="text-sm font-normal leading-normal text-slate-500 dark:text-slate-400">오전 10:35 - 김민지 도우미가 배정되었습니다.</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="h-full w-[2px] bg-primary"></div>
+<div class="flex size-8 items-center justify-center rounded-full border-2 border-primary bg-background-light text-primary dark:bg-background-dark">
+<span class="material-symbols-outlined !text-xl">directions_car</span>
+</div>
+<div class="h-full w-[2px] bg-slate-300 dark:bg-slate-700"></div>
+</div>
+<div class="flex flex-1 flex-col pb-6">
+<p class="text-base font-bold leading-normal text-primary dark:text-primary-300">이동 중</p>
+<p class="text-sm font-normal leading-normal text-slate-500 dark:text-slate-400">도우미가 어르신께 가고 있습니다.</p>
+</div>
+<div class="flex flex-col items-center gap-1 pb-3">
+<div class="h-full w-[2px] bg-slate-300 dark:bg-slate-700"></div>
+<div class="flex size-8 items-center justify-center rounded-full border-2 border-slate-300 text-slate-400 dark:border-slate-700 dark:text-slate-500">
+<span class="material-symbols-outlined !text-xl">flag</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col pb-5">
+<p class="text-base font-medium leading-normal text-slate-400 dark:text-slate-500">서비스 완료</p>
+</div>
+</div>
+<div class="flex-grow"></div>
+<div class="sticky bottom-0 mt-4 w-full border-t border-slate-200 bg-background-light/80 p-4 backdrop-blur-sm dark:border-slate-700 dark:bg-background-dark/80">
+<div class="flex flex-col gap-3">
+<button class="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-bold text-white shadow-lg">
+<span class="material-symbols-outlined">call</span>
+          고객센터 연결
+        </button>
+<button class="w-full rounded-full px-8 py-4 text-lg font-bold text-slate-600 dark:text-slate-400">요청 취소</button>
+</div>
+</div>
+</div>
+
+</body></html>
