@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/client"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Request {
+  id                Int      @id @default(autoincrement())
+  category          String
+  urgency           String
+  summary           String
+  keywords          String   // Comma-separated or JSON string
+  status            String
+  timestamp         DateTime @default(now())
+  assignedSupporter String?
+  latitude          Float?
+  longitude         Float?
+}
+
+model Supporter {
+  id             Int    @id @default(autoincrement())
+  name           String
+  specialty      String
+  location       String
+  status         String
+  rating         Float
+  completedTasks Int
+  latitude       Float?
+  longitude      Float?
+}
+
+model Infrastructure {
+  id        Int     @id @default(autoincrement())
+  name      String
+  type      String  // '치매센터' or '마을회관/경로당'
+  address   String
+  latitude  Float?
+  longitude Float?
+  phone     String?
+}
+
+model RegionStat {
+  id           Int    @id @default(autoincrement())
+  region       String
+  elderlyRatio Float
+  elderlyCount Int
+  totalCount   Int
+}
